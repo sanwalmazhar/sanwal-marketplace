@@ -76,14 +76,14 @@ contract NFTMarketplace is IERC721Receiver {
     function buyNFT(uint256 _tokenId) external payable {
         Listing memory listing = listings[_tokenId];
         require(listing.isListed, "NFT is not listed");
-        // require(nftPrice == listing.price, "Insufficient funds sent");
+        //require(nftPrice == listing.price, "Insufficient funds sent");
 
         // Transfer the NFT to the buyer
-        nftContract.safeTransferFrom(
-            listing.seller,
-            msg.sender,
-            listing.tokenId
-        );
+        // nftContract.safeTransferFrom(
+        //     listing.seller,
+        //     msg.sender,
+        //     listing.tokenId
+        // );
 
         // Transfer the payment to the seller
         payable(listing.seller).sendValue(nftPrice);

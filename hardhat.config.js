@@ -53,6 +53,7 @@ module.exports = {
       polygonMumbai: POLYGON_API_KEY,
       // avalancheFujiTestnet: AVALANCHE_API_KEY,
       // sepolia:SEPOLIA_API_KEY
+     
     },      
      networks: [ 
       
